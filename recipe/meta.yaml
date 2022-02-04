@@ -31,6 +31,8 @@ requirements:
     - pyyaml
 
 test:
+  source_files:
+    - tests
   imports:
     - numbers_parser
     - numbers_parser.generated
@@ -38,8 +40,10 @@ test:
     - pip check
     - cat-numbers --help
     - unpack-numbers --help
+    - pytest -vvv --capture=tee-sys tests
   requires:
     - pip
+    - pytest
 
 about:
   home: https://github.com/masaccio/numbers-parser
