@@ -24,10 +24,8 @@ requirements:
     - python >=3.6
   run:
     - protobuf
-    - pytest
     - python >=3.6
     - python-snappy
-    - pyyaml
     - roman
 
 test:
