@@ -1,5 +1,5 @@
 {% set name = "numbers-parser" %}
-{% set version = "2.3.13" %}
+{% set version = "3.0.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/numbers-parser-{{ version }}.tar.gz
-  sha256: 5965239022adfde77bcc84b2de18f97c2b85711c3be758eaeef6c9c5e3233a91
+  sha256: 38eefecd97dc9e5940a830f347b21b21652f1bc0d053c4741fb797196e4c2763
 
 build:
   number: 0
@@ -23,9 +23,11 @@ requirements:
     - pip
     - python >=3.6
   run:
-    - protobuf
+    - compact-json
+    - protobuf >=3.20.1
     - python >=3.6
     - python-snappy
+    - regex
     - roman
 
 test:
