@@ -21,11 +21,11 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.8
   run:
     - compact-json
     - protobuf >=3.20.1
-    - python >=3.6
+    - python >=3.8
     - python-snappy
     - regex
     - roman
