@@ -1,11 +1,11 @@
-About numbers-parser
-====================
+About numbers-parser-feedstock
+==============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/numbers-parser-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/masaccio/numbers-parser
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/numbers-parser-feedstock/blob/main/LICENSE.txt)
 
 Summary: Package to read data from Apple Numbers spreadsheets
 
