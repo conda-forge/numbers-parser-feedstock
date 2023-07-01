@@ -1,5 +1,5 @@
 {% set name = "numbers-parser" %}
-{% set version = "3.10.1" %}
+{% set version = "3.11.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 6074472c838fee3886ad6873163163daf0c55b999c0253a0bf0c9c8901d85673
+  sha256: f0e5ad25e5de8fb7ade0cf7f80c7c28b5de604adca7513df9d301d52b593595e
 
 build:
   number: 0
@@ -22,15 +22,17 @@ requirements:
   host:
     - pip
     - poetry-core >=1.0.0
-    - python >=3.8,<4.0
+    - python >=3.8.0,<4.0.0
+
   run:
     - compact-json >=1.1.3,<2.0.0
+    - decimal128 >=1.0.0,<2.0.0
     - pendulum >=2.1.2,<3.0.0
     - protobuf >=4.21.1,<5.0.0
-    - python >=3.8,<4.0
+    - python >=3.8.0,<4.0.0
     - python-snappy >=0.6.1,<0.7.0
     - regex >=2022.9.13,<2023.0.0
-    - roman >=3.3,<4.0
+    - roman >=3.3.0,<4.0.0
 
 test:
   imports:
