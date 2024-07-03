@@ -1,5 +1,5 @@
 {% set name = "numbers-parser" %}
-{% set version = "4.12.1" %}
+{% set version = "4.12.2" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 24551e1cd34640c968b6295c357ee2ab73a0a0bed0aa8b4580f1712f5b74418b
+  sha256: e430c90ce849625b60740f690dcc885e99f6208a45c5dbdfc0ec20f9b762e470
 
 build:
   number: 0
