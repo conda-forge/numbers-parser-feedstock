@@ -1,5 +1,5 @@
 {% set name = "numbers-parser" %}
-{% set version = "4.14.2" %}
+{% set version = "4.14.3" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 80f5285a40193295836384f3847e13bb4a9d63936cebd279936b7bc5bc6033fa
+  sha256: beba414490b90587f801dea3e24589b7b4fbe1ba68bae61e1c4a968faa29328e
 
 build:
   number: 0
@@ -34,13 +34,12 @@ requirements:
     - setuptools >=70.0.0
     - importlib-resources >=6.1
     - enum_tools >=0.11
-    - python-dateutil <3.0.0,>=2.9.0#.post0
+    - python-dateutil >=2.9.0.post0,<3.0.0
 
 test:
   imports:
     - numbers_parser
   commands:
-    # Disabling pip check because upstream pinned to python-dateutil 2.9.0.post0, can restore when we move off of that
     - pip check
     - cat-numbers --help
     - unpack-numbers --help
