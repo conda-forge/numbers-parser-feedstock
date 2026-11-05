@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: numbers-parser
-  version: "4.19.0"
+  version: "4.20.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 8a0ba5f374b7a8822efee979837a2dd8f6d6e45062e74ddc90a2a9c9bdd47794
+  sha256: 321bf550e662a4480c563f562c476ce71f869ac0eb661de6e15f47b7e103646b
 
 build:
   number: 0
@@ -25,25 +25,29 @@ build:
 requirements:
   host:
     - pip
-    - setuptools >=61.0
+    - setuptools >=70.0.0
     - python ${{ python_min }}.*
   run:
     - python >=${{ python_min }}
     - compact-json >=1.1.3
-    - protobuf >=7.34.0
+    - protobuf >=7.36.0
     - python-snappy >=0.7
     - sigfig >=1.3.3
     - setuptools >=70.0.0
     - importlib-resources >=6.1
     - enum_tools >=0.11
     - python-dateutil >=2.9.0.post0
+    - security >=1.3.1
+    - cryptography >=50.0.1
 
 tests:
   - python:
       imports:
         - numbers_parser
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
   - requirements:
       run:
         - python ${{ python_min }}.*
