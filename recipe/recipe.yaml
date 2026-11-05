@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: numbers-parser
-  version: "4.20.0"
+  version: "4.21.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 321bf550e662a4480c563f562c476ce71f869ac0eb661de6e15f47b7e103646b
+  sha256: e8ab5e073d357d0f64ac7b3fca696c30cb8393ac77cf1f9755f1958e073016af
 
 build:
   number: 0
